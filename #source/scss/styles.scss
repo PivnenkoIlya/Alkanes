@@ -1,0 +1,184 @@
+@import url(../css/resetStyles.css);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Raleway:wght@800&family=Roboto+Condensed:ital@1&family=Roboto:ital,wght@1,100&family=Rubik:wght@400;700&display=swap");
+
+/////////////////////////////// body, wrapper, __container  /////////////////////////////////////
+
+body {
+  font-family: Montserrat;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+}
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: url("../img/bg.jpg") 0 0 no-repeat;
+  background-size: 100% 100%;
+  min-height: 100%;
+}
+[class*="__container"] {
+  max-width: 1017px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+//////////////////////////////////// header //////////////////////////////////////
+
+.header {
+  background-color: rgba(0, 0, 0, 0.247);
+  padding: 50px;
+  @media (max-width: 700px) {
+    padding: 20px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+  &__title {
+    flex: 0 1 80%;
+    font-size: 40px;
+    margin-right: 50px;
+    @media (max-width: 700px) {
+      margin-right: 0px;
+      margin-bottom: 5px;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+  &__prompt {
+    flex: 0 1 10%;
+    font-size: 20px;
+    color: aqua;
+    z-index: 10;
+  }
+}
+
+////////////////////////////////
+
+.test {
+  flex: 1 1 auto;
+  padding: 50px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    margin-bottom: 30px;
+  }
+  &__button {
+    text-align: center;
+    align-self: center;
+    font-size: 25px;
+    box-shadow: 4px 4px 0px 0px rgba(34, 60, 80, 0.529);
+    background: rgb(0, 255, 255);
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease 0s;
+    &:hover {
+      background: rgba(0, 255, 255, 0.5);
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px 0px rgba(34, 60, 80, 0.529);
+    }
+    margin-bottom: 20px;
+  }
+  &__answer {
+    transition: all 0.5s ease 0s;
+    padding: 10px;
+    background-color: #00000049;
+    font-size: 20px;
+    align-self: center;
+    text-align: center;
+  }
+}
+.form {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  &__name {
+    font-size: 30px;
+    color: blue;
+  }
+  &__input {
+    padding: 12px;
+    border: solid 3px rgba(0, 0, 0, 0.255);
+    transition: all 0.5s ease 0s;
+    &:focus {
+      transform: scale(1.1, 1.1);
+      box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+  }
+  &__button {
+    box-shadow: 4px 4px 0px 0px rgba(34, 60, 80, 0.529);
+    background: rgb(153, 255, 0);
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease 0s;
+    &:hover {
+      background: rgb(238, 255, 0);
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px 0px rgba(34, 60, 80, 0.529);
+    }
+  }
+}
+.color-green {
+  color: greenyellow;
+}
+.color-red {
+  color: rgb(255, 0, 0);
+}
+///////////////////////////
+
+.footer {
+  background: url("/img/footer.jpg") 0 0 no-repeat;
+  background-size: 100% 100%;
+  padding: 30px;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 650px) {
+      flex-direction: column-reverse;
+      justify-self: center;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  &__copy {
+    flex: 0 1 60%;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  &__items {
+    display: flex;
+    gap: 20px;
+    flex: 0 0 40%;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    flex: 0 1 50px;
+    min-height: 50px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease 0s;
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+    }
+  }
+}
